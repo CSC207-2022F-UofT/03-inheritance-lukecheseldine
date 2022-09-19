@@ -104,8 +104,10 @@ public abstract class Bag {
             if (this.contents[i + 1] == null) {
                 value = this.contents[i];
                 this.contents[i] = null;
-                this.capacity--;
+                this.numberOfContents--;
+                break;
             }
+            i++;
         }
         return value;
     }
